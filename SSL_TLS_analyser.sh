@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# =========================
-# Colors
-# =========================
+
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -13,11 +11,8 @@ WHITE='\033[1;37m'
 BOLD='\033[1m'
 NC='\033[0m'
 
-MAX_JOBS=5   # <<<<< PARALLEL JOB LIMIT
+MAX_JOBS=5 
 
-# =========================
-# UI
-# =========================
 print_header() {
     echo -e "${PURPLE}${BOLD}"
     echo "╔════════════════════════════════════════════════════════════╗"
@@ -95,9 +90,6 @@ scan_domain() {
     echo -e "${GREEN}[+] Finished $DOMAIN${NC}"
 }
 
-# =========================
-# Parallel Execution
-# =========================
 echo -e "${BLUE}[*] Starting parallel scan (${MAX_JOBS} jobs)...${NC}"
 
 job_count=0
